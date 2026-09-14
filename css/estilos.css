@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0b0e14;
+    --bg-secondary: #161b22;
+    --bg-accent: #1f242d;
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+    --accent-gold: #d4af37;
+    --accent-cyan: #38bdf8;
+    --border-color: #30363d;
+}
+
+body {
+    font-family: system-ui, -apple-system, Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Encabezado y Menú */
+.main-header {
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--accent-gold);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.site-title { color: var(--accent-gold); font-size: 2rem; }
+.site-subtitle { color: var(--text-muted); }
+
+.main-nav {
+    background-color: var(--bg-accent);
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-item { display: inline-block; margin: 4px; }
+.nav-link {
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+.nav-link:hover { color: var(--accent-gold); }
+
+/* Secciones y Tarjetas */
+.content-section {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 25px 0;
+}
+
+.topic-card {
+    background-color: var(--bg-accent);
+    border-left: 4px solid var(--accent-cyan);
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* Galería Adaptable SIN Flexbox/Grid */
+.gallery-container { text-align: center; font-size: 0; }
+.gallery-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin: 1%;
+    background-color: var(--bg-accent);
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    text-align: left;
+}
+
+.responsive-img { width: 100%; height: auto; display: block; }
+.image-caption { padding: 12px; font-size: 0.9rem; color: var(--text-muted); }
+
+/* Video Responsivo */
+.video-wrapper { max-width: 800px; margin: 0 auto; background: #000; }
+.video-player { width: 100%; height: auto; }
+
+/* Adaptabilidad para Teléfonos */
+@media screen and (max-width: 768px) {
+    .nav-item { display: block; }
+    .gallery-item { width: 98%; margin: 1% 0; }
+}
